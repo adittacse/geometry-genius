@@ -3,6 +3,11 @@ document.getElementById("blog").addEventListener("click",function() {
     window.location.href = "blog.html";
 })
 
+// random background color
+randomColor = function(e) {
+    e.style.background =  "#" + (Math.random() * 0xFFFFFF<<0).toString(16);
+}
+
 //take value from input
 function getValueFromInput(id) {
     const mainId = document.getElementById(id);
@@ -39,11 +44,22 @@ function addNewElement(area , areaName) {
     tr.innerHTML = `
         <td>${result}</td>
         <td class="pl-2 text-sm w-8 text-left">${areaName}</td>
-        <td class="px-2 text-sm">${fixedArea}</td>
-        <td><button class="btn-primary">Convert to M<sup>2</sup></button></td>
+        <td id="value-main" class="px-2 text-sm">${fixedArea}cm<sup>2</sup></td>
+        <td><button id="convert" class="btn-primary">Convert to M<sup>2</sup></button></td>
     `;
     if(isNaN(area)) {
         return;
     }
     areaContainer.appendChild(tr);
+
+    document.getElementById("convert").addEventListener("click", function(event) {
+        const cmResultElement = document.getElementById("value-main");
+        const cmResult = parseFloat(cmResultElement.innerText);
+        const meterSquareResult = cmResult * 0.0001;
+        cmResultElement.innerText = meterSquareResult;
+        event.stopPropagation();
+    });
+
 }
+
+
