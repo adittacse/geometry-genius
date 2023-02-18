@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Geometry Genius</title>
+	<!--fontawesome kit-->
+	<script src="https://kit.fontawesome.com/1022f50e89.js" crossorigin="anonymous"></script>
+	<!--tailwind css-->
+	<script src="https://cdn.tailwindcss.com"></script>
+	<!--custom css-->
+</head>
+
+<body class="font-sans">
+	<!-- header section -->
+	<header class="m-2 md:m-7 p-4 bg-sky-100 rounded flex justify-between items-center">
+		<div id="header-title">
+			<h1 class="text-2xl font-bold">Interactive</h1>
+			<h3 class="tracking-wide">Geometry Genius</h3>
+		</div>
+		<div id="header-blog">
+			<button id="blog" class="bg-blue-700 hover:bg-blue-500 text-white px-6 py-2 rounded">Blog</button>
+		</div>
+	</header>
+	
+	<!-- main section -->
+	<main>
+		<section class="px-5 py-10 grid grid-cols-4 lg:grid-cols-4 gap-4 w-11/12 place-items-center lg:place-items-start mx-auto">
+			<div class="border border-slate-200 text-center space-y-3 w-72 p-5">
+				<div class="w-44 h-32 mx-auto">
+					<img class="w-full h-full" src="images/triangle.png" alt="" />
+				</div>
+				<h1 class="text-2xl font-semibold pt-4">Triangle</h1>
+				<h1>Formula (A) = 0.5 x <span id="tri-a">b</span> x<span id="tri-b">h</span></h1>
+				<input class="w-20 rounded-sm outline-none px-3 py-1 bg-slate-50" type="text" placeholder="b" id="triangle-first"/>
+				<span class="ml-1"> cm </span>
+				<input id="triangle-second" class="w-20 bg-slate-50 outline-none px-3 py-1" type="text" placeholder="h"/>
+				<span class="ml-1"> cm </span>
+				<i class="fa-regular fa-pen-to-square"></i>
+				<button class="bg-blue-500 py-2 px-20 rounded-lg text-white font-semibold hover:bg-blue-700 transition-all" id="triangle-btn">
+					Calculate</button>
+			</div>
+			<div  class="border border-slate-200 text-center space-y-3 w-72 p-7">
+				<div class="w-44 h-32 mx-auto">
+					<img class="w-full h-full" src="images/rectangle.png" alt=""/>
+				</div>
+				<h1 id="rectangle" class="text-2xl font-semibold pt-4">Rectangle</h1>
+				<h1>Formula (A) = <span id="rec-a">w</span> x <span id="rec-b">i</span></h1>
+				<input class="w-20 rounded-sm outline-none px-3 py-1 bg-slate-50" placeholder="w" type="text" id="rectangle-first"/>
+				<span class="ml-1"> cm </span>
+				<input id="rectangle-second" class="w-20 bg-slate-50 outline-none px-3 py-1" type="text" placeholder="i"/>
+				<span class="ml-1"> cm </span>
+				<button id="rectangle-btn" class="bg-blue-500 py-2 px-20 rounded-lg text-white font-semibold hover:bg-blue-700 transition-all">
+					Calculate</button>
+			</div>
+			<div  class="border border-slate-200 text-center space-y-3 w-72 p-7">
+				<div class="w-44 h-32 mx-auto">
+					<img class="w-full h-full" src="images/parallelogram.png" alt=""/>
+				</div>
+				<h1 class="text-2xl font-semibold pt-4">Parallelogram</h1>
+				<h1>Formula (A) = <span id="par-a">b</span> x <span id="par-b">h</span></h1>
+				<input class="w-20 rounded-sm outline-none px-3 py-1 bg-slate-50" type="text" placeholder="b" id="para-first"/>
+				<span class="ml-1"> cm </span>
+				<input id="para-second" class="w-20 bg-slate-50 outline-none px-3 py-1" type="text" placeholder="h"/>
+				<span class="ml-1"> cm </span>
+				<button id="para-btn" class="bg-blue-500 py-2 px-20 rounded-lg text-white font-semibold hover:bg-blue-700 transition-all">
+					Calculate</button>
+			</div>
+			
+			<div  class="border border-slate-200 text-center space-y-3 w-72 p-7">
+				<div class="w-44 h-32 mx-auto">
+					<img class="w-full h-full" src="images/rhombus.png" alt=""/>
+				</div>
+				<h1 class="text-2xl font-semibold pt-4">Rhombus</h1>
+				<h1>Formula (A) = 0.5 x <span id="rom-a">d<sub>1</sub></span> x <span id="rom-b">d
+					<sub>2</sub></span></h1>
+				<input id="rhombus-first" class="w-20 rounded-sm outline-none px-3 py-1 bg-slate-50" type="text" placeholder="d1"/>
+				<span class="ml-1"> cm </span>
+				<input id="rhombus-second" placeholder="d2" class="w-20 bg-slate-50 outline-none px-3 py-1" type="text"/>
+				<span class="ml-1"> cm </span>
+				<button id="rhombus-btn" class="bg-blue-500 py-2 px-20 rounded-lg text-white font-semibold hover:bg-blue-700 transition-all">
+					Calculate</button>
+			</div>
+			<div  class="border border-slate-200 text-center space-y-3 w-72 p-7">
+				<div class="w-44 h-32 mx-auto">
+					<img class="w-full h-full" src="images/pentagon.png" alt="" />
+				</div>
+				<h1 class="text-2xl font-semibold pt-4">Pentagon</h1>
+				<h1>Formula (A) = 0.5 x <span id="pen-a">p</span> x <span id="pen-b">b</span>
+				</h1>
+				<input id="pentagon-first" class="w-20 rounded-sm outline-none px-3 py-1 bg-slate-50" type="text" placeholder="p"/>
+				<span class="ml-1"> cm </span>
+				<input placeholder="b" id="pentagon-second" class="w-20 bg-slate-50 outline-none px-3 py-1" type="text"/>
+				<span class="ml-1"> cm </span>
+				<button id="pentagon-btn" class="bg-blue-500 py-2 px-20 rounded-lg text-white font-semibold hover:bg-blue-700 transition-all">
+					Calculate</button>
+			</div>
+			<div  class="border border-slate-200 text-center space-y-3 w-72 p-7">
+				<div class="w-44 h-32 mx-auto">
+					<img class="w-full h-full" src="images/ellipse.png" alt="" />
+				</div>
+				<h1 class="text-2xl font-semibold pt-4">Ellipse</h1>
+				<h1>Formula (A) = π x<span id="ell-a">a</span> x <span id="ell-b">b</span></h1>
+				<input id="ellipse-first" class="w-20 rounded-sm outline-none px-3 py-1 bg-slate-50" placeholder="a" type="text"/>
+				<span class="ml-1"> cm </span>
+				<input id="ellipse-second" placeholder="b" class="w-20 bg-slate-50 outline-none px-3 py-1" type="text"/>
+				<span class="ml-1"> cm </span>
+				<button id="ellipse-btn" class="bg-blue-500 py-2 px-20 rounded-lg text-white font-semibold hover:bg-blue-700 transition-all">
+					Calculate</button>
+			</div>
+			<!-- Area side start -->
+			<div id="area-container"
+			     class="text-center space-y-3 w-11/12 p-7 border lg:row-start-1 border-slate-200 lg:col-start-4">
+				<h1 class="underline">Area Calculation</h1>
+				<table id="table-container">
+				</table>
+			</div>
+			<!-- Area side end -->
+		</section>
+	</main>
+	
+</body>
+</html>
