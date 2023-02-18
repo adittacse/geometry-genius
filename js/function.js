@@ -51,15 +51,13 @@ function addNewElement(area , areaName) {
         return;
     }
     areaContainer.appendChild(tr);
-
-    document.getElementById("convert").addEventListener("click", function(event) {
-        const cmResultElement = document.getElementById("value-main");
-        const cmResult = parseFloat(cmResultElement.innerText);
-        const meterSquareResult = cmResult * 0.0001;
-        cmResultElement.innerText = meterSquareResult;
-        event.stopPropagation();
-    });
-
 }
 
-
+// convert centimeter square to meter square
+// document.getElementById("convert").addEventListener("click", function(event) {
+//     const cmResultElement = document.getElementById("value-main");
+//     const cmResult = parseFloat(cmResultElement.innerText);
+//     const meterSquareResult = cmResult * 0.0001;
+//     cmResultElement.innerText = meterSquareResult;
+//     event.stopPropagation();
+// });
