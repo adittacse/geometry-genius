@@ -27,5 +27,13 @@ document.getElementById("rhombus-btn").addEventListener("click",function() {
     const firstValue = getValueFromInput("rhombus-first");
     const secondValue = getValueFromInput("rhombus-second");
     const area = 0.5 * firstValue * secondValue;
-    setValueFormula("rom-a","rom-b", firstValue, secondValue);
+    setValueFormula("rom-a", "rom-b", firstValue, secondValue);
+})
+
+// pentagon calculation
+document.getElementById("pentagon-btn").addEventListener("click",function() {
+    const firstValue = getValueFromInput("pentagon-first");
+    const secondValue = getValueFromInput("pentagon-second");
+    const area = 0.5 * firstValue * secondValue;
+    setValueFormula("pen-a", "pen-b", firstValue, secondValue);
 })
