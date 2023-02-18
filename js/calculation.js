@@ -13,3 +13,11 @@ document.getElementById("rectangle-btn").addEventListener("click", function () {
     const area = firstValue * secondValue;
     setValueFormula("rec-a", "rec-b", firstValue, secondValue);
 });
+
+// parallelogram calculation
+document.getElementById("para-btn").addEventListener("click", function () {
+    const firstValue = getValueFromInput("para-first");
+    const secondValue = getValueFromInput("para-second");
+    const area = firstValue * secondValue;
+    setValueFormula("par-a", "par-b", firstValue, secondValue);
+});
