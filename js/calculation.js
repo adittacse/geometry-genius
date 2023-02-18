@@ -21,3 +21,11 @@ document.getElementById("para-btn").addEventListener("click", function () {
     const area = firstValue * secondValue;
     setValueFormula("par-a", "par-b", firstValue, secondValue);
 });
+
+// rhombus calculation
+document.getElementById("rhombus-btn").addEventListener("click",function() {
+    const firstValue = getValueFromInput("rhombus-first");
+    const secondValue = getValueFromInput("rhombus-second");
+    const area = 0.5 * firstValue * secondValue;
+    setValueFormula("rom-a","rom-b", firstValue, secondValue);
+})
