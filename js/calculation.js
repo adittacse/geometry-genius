@@ -4,6 +4,7 @@ document.getElementById("triangle-btn").addEventListener("click", function () {
     const secondValue = getValueFromInput("triangle-second");
     const area = 0.5 * firstValue * secondValue;
     setValueFormula("tri-a", "tri-b", firstValue, secondValue);
+    // display result
     addNewElement(area, "Triangle");
 });
 
@@ -13,6 +14,8 @@ document.getElementById("rectangle-btn").addEventListener("click", function () {
     const secondValue = getValueFromInput("rectangle-second");
     const area = firstValue * secondValue;
     setValueFormula("rec-a", "rec-b", firstValue, secondValue);
+    // display result
+    addNewElement(area, "Rectangle");
 });
 
 // parallelogram calculation
@@ -21,6 +24,8 @@ document.getElementById("para-btn").addEventListener("click", function () {
     const secondValue = getValueFromInput("para-second");
     const area = firstValue * secondValue;
     setValueFormula("par-a", "par-b", firstValue, secondValue);
+    // display result
+    addNewElement(area, "Parallelogram");
 });
 
 // rhombus calculation
@@ -29,6 +34,8 @@ document.getElementById("rhombus-btn").addEventListener("click",function() {
     const secondValue = getValueFromInput("rhombus-second");
     const area = 0.5 * firstValue * secondValue;
     setValueFormula("rom-a", "rom-b", firstValue, secondValue);
+    // display result
+    addNewElement(area, "Rhombus");
 })
 
 // pentagon calculation
@@ -37,6 +44,8 @@ document.getElementById("pentagon-btn").addEventListener("click",function() {
     const secondValue = getValueFromInput("pentagon-second");
     const area = 0.5 * firstValue * secondValue;
     setValueFormula("pen-a", "pen-b", firstValue, secondValue);
+    // display result
+    addNewElement(area, "Pentagon");
 })
 
 // ellipse calculation
@@ -45,4 +54,6 @@ document.getElementById("ellipse-btn").addEventListener("click",function() {
     const secondValue = getValueFromInput("ellipse-second");
     const area = 3.1416 * firstValue * secondValue;
     setValueFormula("ell-a", "ell-b", firstValue, secondValue);
+    // display result
+    addNewElement(area, "Ellipse");
 })

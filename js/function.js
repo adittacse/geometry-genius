@@ -38,7 +38,7 @@ function addNewElement(area , areaName) {
     result += 1;
     tr.innerHTML = `
         <td>${result}</td>
-        <td class="pl-2 text-sm w-8">${areaName}</td>
+        <td class="pl-2 text-sm w-8 text-left">${areaName}</td>
         <td class="px-2 text-sm">${fixedArea}</td>
         <td><button class="btn-primary">Convert to M<sup>2</sup></button></td>
     `;
