@@ -37,3 +37,11 @@ document.getElementById("pentagon-btn").addEventListener("click",function() {
     const area = 0.5 * firstValue * secondValue;
     setValueFormula("pen-a", "pen-b", firstValue, secondValue);
 })
+
+// ellipse calculation
+document.getElementById("ellipse-btn").addEventListener("click",function() {
+    const firstValue = getValueFromInput("ellipse-first");
+    const secondValue = getValueFromInput("ellipse-second");
+    const area = 3.1416 * firstValue * secondValue;
+    setValueFormula("ell-a", "ell-b", firstValue, secondValue);
+})
